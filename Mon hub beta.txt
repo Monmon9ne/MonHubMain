@@ -1,0 +1,502 @@
+local OrionLib = loadstring(game:HttpGet(("https://pastebin.com/raw/WRUyYTdY")))()
+
+local Window = OrionLib:MakeWindow({Name = "Mon Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local Tab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://113908148449757",
+	PremiumOnly = false
+})
+
+Tab:AddToggle({
+    Name = "FullBright(on = off | off = on)",
+    Default = true,
+    Callback = function(Value)
+        if Value then
+            game:GetService("Lighting").Brightness = 2
+            game:GetService("Lighting").ClockTime = 14
+            game:GetService("Lighting").FogEnd = 100000
+            game:GetService("Lighting").GlobalShadows = false
+            game:GetService("Lighting").OutdoorAmbient = Color3.fromRGB(128, 128, 128)
+        else
+            game:GetService("Lighting").Brightness = 10
+            game:GetService("Lighting").ClockTime = 12
+            game:GetService("Lighting").FogEnd = 10000
+            game:GetService("Lighting").GlobalShadows = true
+            game:GetService("Lighting").OutdoorAmbient = Color3.fromRGB(127, 127, 127)
+        end
+            end
+})
+
+local Section = Tab:AddSection({
+	Name = "FOV"
+})
+
+Tab:AddSlider({
+	Name = "FOV",
+	Min = 70,
+	Max = 120,
+	Default = 70,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "FOV",
+	Callback = function(Value)
+		workspace.CurrentCamera.FieldOfView = Value
+	end    
+})
+
+Tab:AddButton({
+	Name = "120 Fov!",
+	Callback = function()
+      		workspace.CurrentCamera.FieldOfView = 120
+  	end    
+})
+
+Tab:AddButton({
+	Name = "70 Fov!",
+	Callback = function()
+      		workspace.CurrentCamera.FieldOfView = 70
+  	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "Walk Speed"
+})
+
+Tab:AddSlider({
+	Name = "WalkSpeed",
+	Min = 16,
+	Max = 250,
+	Default = 16,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "WalkSpeed",
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+	end    
+})
+
+Tab:AddButton({
+	Name = "75 walkspeed!",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 75
+  	end    
+})
+
+Tab:AddButton({
+	Name = "50 walkspeed!",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+  	end    
+})
+
+Tab:AddButton({
+	Name = "25 walkspeed!",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 25
+  	end    
+})
+
+Tab:AddButton({
+	Name = "normal walkspeed!",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+  	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "Jump Power"
+})
+
+Tab:AddSlider({
+	Name = "JumpPower",
+	Min = 50,
+	Max = 500,
+	Default = 50,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Power",
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+Tab:AddButton({
+	Name = "200 jump power!",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 200
+  	end    
+})
+
+Tab:AddButton({
+	Name = "150 jump power!",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 150
+  	end    
+})
+
+Tab:AddButton({
+	Name = "100 jump power!",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 100
+  	end    
+})
+
+Tab:AddButton({
+	Name = "normal jump power!",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+  	end    
+})
+
+Tab:AddLabel("Gravity")
+
+Tab:AddSlider({
+	Name = "Gravity",
+	Min = 1,
+	Max = 500,
+	Default = 196.2,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Gravity",
+	Callback = function(Value)
+		game.Workspace.Gravity = Value
+        print("Value gravity!")
+	end    
+})
+
+Tab:AddButton({
+	Name = "250 gravity!",
+	Callback = function()
+      		game.Workspace.Gravity = 250
+  	end    
+})
+
+Tab:AddButton({
+	Name = "200 gravity!",
+	Callback = function()
+      		game.Workspace.Gravity = 200
+              print("changed gravity!")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Normal Gravity!",
+	Callback = function()
+      		game.Workspace.Gravity = 196.2
+              print("changed gravity!")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "150 gravity!",
+	Callback = function()
+      		game.Workspace.Gravity = 150
+              print("changed gravity!")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "100 gravity!",
+	Callback = function()
+      		game.Workspace.Gravity = 100
+              print("changed gravity!")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "50 gravity!",
+	Callback = function()
+      		game.Workspace.Gravity = 50
+              print("changed gravity!")
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Misc",
+	Icon = "rbxassetid://113908148449757",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Mon Hub"
+})
+
+Tab:AddButton({
+	Name = "Mon Hub Infinite Yield",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Monmon9ne/MonHubbeta1/refs/heads/main/MonHubInfiniteYield.txt"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Rejoin",
+	Callback = function()
+      		game.Players.localPlayer:kick("MonHub : Please Click Rejoin!")
+ 
+game:GetService("StarterGui"):SetCore("SendNotification",{
+ Title = "GGH52Lan";
+ Text = "Executed";
+ Duration = 5;
+ Icon = "rbxassetid://14260295451";
+})
+
+gui = game.CoreGui.RobloxPromptGui.promptOverlay:WaitForChild("ErrorPrompt")
+
+gui.Size = UDim2.new(0, 400, 0, 230)
+
+leave = gui.MessageArea.ErrorFrame.ButtonArea.LeaveButton
+
+gui.MessageArea.MessageAreaPadding.PaddingTop = UDim.new(0,-20)
+gui.MessageArea.ErrorFrame.ErrorFrameLayout.Padding = UDim.new(0, 5)
+
+gui.MessageArea.ErrorFrame.ButtonArea.ButtonLayout.CellPadding = UDim2.new(0, 0, 0, 5)
+
+if not leave.Parent:FindFirstChild"Rejoin" then
+rejoin = leave:Clone()
+rejoin.Parent = leave.Parent
+rejoin.Name="Rejoin"
+rejoin.ButtonText.Text = "Rejoin"
+end
+
+Players = game:GetService("Players")
+TeleportService = game:GetService("TeleportService")
+
+rejoin.MouseButton1Click:Connect(function()
+ if #Players:GetPlayers() <= 1 then
+game.Players.localPlayer:kick("Rejoining...")
+rejoin: destroy ()
+wait(1)
+  TeleportService:Teleport(game.PlaceId, Players.LocalPlayer)
+ else
+  TeleportService:TeleportToPlaceInstance(game.PlaceId, game.JobId, Players.LocalPlayer)
+ end
+end)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Blox Fruit Auto Farm chest",
+	Callback = function()
+      		-- Initialize GUI
+local ScreenGui = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local EnableButton = Instance.new("TextButton")
+local DisableButton = Instance.new("TextButton")
+
+-- Set GUI properties
+ScreenGui.Name = "Mon Hub"
+ScreenGui.Parent = game.CoreGui
+
+-- MainFrame properties
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = ScreenGui
+MainFrame.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
+MainFrame.Position = UDim2.new(0.4, 0, 0.4, 0)
+MainFrame.Size = UDim2.new(0, 250, 0, 150)
+MainFrame.Active = true
+MainFrame.Draggable = true -- Makes the frame draggable
+
+-- Enable Button Properties
+EnableButton.Name = "EnableButton"
+EnableButton.Parent = MainFrame
+EnableButton.BackgroundColor3 = Color3.new(0, 1, 0) -- Green
+EnableButton.Position = UDim2.new(0.1, 0, 0.2, 0)
+EnableButton.Size = UDim2.new(0, 200, 0, 40)
+EnableButton.Font = Enum.Font.SourceSans
+EnableButton.Text = "Enable"
+EnableButton.TextColor3 = Color3.new(1, 1, 1)
+EnableButton.TextScaled = true
+
+-- Disable Button Properties
+DisableButton.Name = "DisableButton"
+DisableButton.Parent = MainFrame
+DisableButton.BackgroundColor3 = Color3.new(1, 0, 0) -- Red
+DisableButton.Position = UDim2.new(0.1, 0, 0.6, 0)
+DisableButton.Size = UDim2.new(0, 200, 0, 40)
+DisableButton.Font = Enum.Font.SourceSans
+DisableButton.Text = "Disable"
+DisableButton.TextColor3 = Color3.new(1, 1, 1)
+DisableButton.TextScaled = true
+
+-- Variables to toggle script execution
+local Enabled = false
+
+-- Enable Button Functionality
+EnableButton.MouseButton1Click:Connect(function()
+    if Enabled then return end -- Prevent multiple execution
+    Enabled = true
+
+    spawn(function()
+        local MaxSpeed = 300 -- Studs per second
+        local CoreGui = game:GetService("StarterGui")
+        CoreGui:SetCore("SendNotification", {
+            Title = "Mon Hub",
+            Text = "Auto Farm Chest Enabled",
+            Duration = 5,
+        })
+
+        local LocalPlayer = game:GetService("Players").LocalPlayer
+        local Locations = workspace._WorldOrigin.Locations
+
+        local function getCharacter()
+            if not LocalPlayer.Character then
+                LocalPlayer.CharacterAdded:Wait()
+            end
+            LocalPlayer.Character:WaitForChild("HumanoidRootPart")
+            return LocalPlayer.Character
+        end
+
+        local function DistanceFromPlrSort(ObjectList)
+            local RootPart = getCharacter().LowerTorso
+            table.sort(ObjectList, function(ChestA, ChestB)
+                local RootPos = RootPart.Position
+                local DistanceA = (RootPos - ChestA.Position).Magnitude
+                local DistanceB = (RootPos - ChestB.Position).Magnitude
+                return DistanceA < DistanceB
+            end)
+        end
+
+        local UncheckedChests = {}
+        local FirstRun = true
+
+        local function getChestsSorted()
+            if FirstRun then
+                FirstRun = false
+                local Objects = game:GetDescendants()
+                for i, Object in pairs(Objects) do
+                    if Object.Name:find("Chest") and Object.ClassName == "Part" then
+                        table.insert(UncheckedChests, Object)
+                    end
+                end
+            end
+            local Chests = {}
+            for i, Chest in pairs(UncheckedChests) do
+                if Chest:FindFirstChild("TouchInterest") then
+                    table.insert(Chests, Chest)
+                end
+            end
+            DistanceFromPlrSort(Chests)
+            return Chests
+        end
+
+        local function toggleNoclip(Toggle)
+            for _, v in pairs(getCharacter():GetChildren()) do
+                if v.ClassName == "Part" then
+                    v.CanCollide = not Toggle
+                end
+            end
+        end
+
+        local function Teleport(Goal, Speed)
+            if not Speed then Speed = MaxSpeed end
+            toggleNoclip(true)
+            local RootPart = getCharacter().HumanoidRootPart
+            local Magnitude = (RootPart.Position - Goal.Position).Magnitude
+
+            while Magnitude > 1 do
+                local Direction = (Goal.Position - RootPart.Position).unit
+                RootPart.CFrame = RootPart.CFrame + Direction * (Speed * task.wait())
+                Magnitude = (RootPart.Position - Goal.Position).Magnitude
+            end
+            toggleNoclip(false)
+        end
+
+        while Enabled do
+            local Chests = getChestsSorted()
+            if #Chests > 0 then
+                Teleport(Chests[1].CFrame)
+            else
+                local servers = game:GetService("HttpService"):JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/"..game.PlaceId.."/servers/Public?sortOrder=Asc&limit=100"))
+                for _, server in pairs(servers.data) do
+                    if server.playing ~= server.maxPlayers then
+                        game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, server.id)
+                    end
+                end
+            end
+            task.wait()
+        end
+    end)
+end)
+
+-- Disable Button Functionality
+DisableButton.MouseButton1Click:Connect(function()
+    if not Enabled then return end
+    Enabled = false
+
+    local CoreGui = game:GetService("StarterGui")
+    CoreGui:SetCore("SendNotification", {
+        Title = "Mon Hub",
+        Text = "Auto Farm Chest Disabled",
+        Duration = 5,
+    })
+end)
+
+  	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "Other script"
+})
+
+Tab:AddButton({
+	Name = "Fly Gui V3",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-fly-gui-v3-22133"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "KeyBoard",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "NameLess Admin",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "ShiftLock",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FE-Mobile-Shiftlock-Official-19126"))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Fisch",
+	Icon = "rbxassetid://113908148449757",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Mon Hub fisch",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Monmon9ne/MonHubbeta1/refs/heads/main/MonHub.lua%20(1).txt"))()
+              OrionLib:Destroy()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Version",
+	Icon = "rbxassetid://113908148449757",
+	PremiumOnly = false
+})
+
+Tab:AddLabel("Version : V1.1 | draggable, jump power added!")
+
+Tab:AddLabel("Version : V1.2 | added slider for FOV, WalkSpeed and jump power!")
+
+Tab:AddLabel("Version : V1.3 | Added ShiftLock script, change inf yield to mon hub")
+
+Tab:AddLabel("Version : V1.4 | Added mon hub fisch!")
+
+Tab:AddLabel("Version : V1.5 | Added Fisch Tab!")
+
+Tab:AddLabel("Version : V1.6 | Added Gravity, rejoin button and Auto farm chest")
+
+Tab:AddLabel("Version : V1.7 | Updated Fisch Tab")
