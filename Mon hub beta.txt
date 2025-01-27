@@ -4,7 +4,7 @@ local Window = OrionLib:MakeWindow({Name = "Mon Hub", HidePremium = false, SaveC
 
 local Tab = Window:MakeTab({
 	Name = "Main",
-	Icon = "rbxassetid://113908148449757",
+	Icon = "rbxassetid://111520327124425",
 	PremiumOnly = false
 })
 
@@ -34,7 +34,7 @@ local Section = Tab:AddSection({
 
 Tab:AddSlider({
 	Name = "FOV",
-	Min = 70,
+	Min = 0,
 	Max = 120,
 	Default = 70,
 	Color = Color3.fromRGB(255,255,255),
@@ -65,7 +65,7 @@ local Section = Tab:AddSection({
 
 Tab:AddSlider({
 	Name = "WalkSpeed",
-	Min = 16,
+	Min = 0,
 	Max = 250,
 	Default = 16,
 	Color = Color3.fromRGB(255,255,255),
@@ -110,7 +110,7 @@ local Section = Tab:AddSection({
 
 Tab:AddSlider({
 	Name = "JumpPower",
-	Min = 50,
+	Min = 0,
 	Max = 500,
 	Default = 50,
 	Color = Color3.fromRGB(255,255,255),
@@ -153,7 +153,7 @@ Tab:AddLabel("Gravity")
 
 Tab:AddSlider({
 	Name = "Gravity",
-	Min = 1,
+	Min = 0,
 	Max = 500,
 	Default = 196.2,
 	Color = Color3.fromRGB(255,255,255),
@@ -214,7 +214,7 @@ Tab:AddButton({
 
 local Tab = Window:MakeTab({
 	Name = "Misc",
-	Icon = "rbxassetid://113908148449757",
+	Icon = "rbxassetid://111520327124425",
 	PremiumOnly = false
 })
 
@@ -483,7 +483,7 @@ Tab:AddButton({
 
 local Tab = Window:MakeTab({
 	Name = "Version",
-	Icon = "rbxassetid://113908148449757",
+	Icon = "rbxassetid://111520327124425",
 	PremiumOnly = false
 })
 
