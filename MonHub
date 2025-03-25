@@ -1,1 +1,1 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Monmon9ne/MonHubbeta1/refs/heads/main/MonHubMain.txt"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Monmon9ne/Mon_Hub/refs/heads/main/MonHubMain.txt"))()
