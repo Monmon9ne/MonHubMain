@@ -1,7 +1,1 @@
-local PlaceId = game.PlaceId
-
-if PlaceId == 9872472334 then -- Evade
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Monmon9ne/MonHubbeta1/refs/heads/main/obf_xI8X1QyPRD8vruL6z24rvjcvRa1QU86v2rbcumcFU8Lbj1TM4tidSQuGFr0BdI8H.lua.txt"))()
-else
-    game.Players.LocalPlayer:Kick("Game Not Support")
-end
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Monmon9ne/MonHubbeta1/refs/heads/main/obf_xI8X1QyPRD8vruL6z24rvjcvRa1QU86v2rbcumcFU8Lbj1TM4tidSQuGFr0BdI8H.lua.txt"))()
